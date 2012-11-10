@@ -95,9 +95,9 @@ for i in range(len(count_of_digits)):
 	text = tex.split("---")
 	numbers = count_of_digits[i]
 	if numbers > len(text):
-		print text[-1]
+		print text[-1].strip()
 	else:
-		print text[numbers]
+		print text[numbers].strip()
 
 	texts.close()
 
