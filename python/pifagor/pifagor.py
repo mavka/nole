@@ -1,6 +1,6 @@
 # all info - http://clck.ru/3skVp
 # coding: utf-8
-
+import sys; reload(sys); sys.setdefaultencoding('utf-8')
 
 
 def char_to_digit(some_list):
