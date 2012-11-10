@@ -90,7 +90,7 @@ count_of_digits = [full_list.count(x) for x in range(1, 10)]
 #print results!
 
 for i in range(len(count_of_digits)):
-	texts = open("texts/t" + str(i+1) + ".txt")
+	texts = open("texts/t%r.txt" % (i+1))
 	tex = texts.read()
 	text = tex.split("---")
 	numbers = count_of_digits[i]
