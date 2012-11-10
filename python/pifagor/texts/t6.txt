@@ -1,0 +1,17 @@
+text for zero
+
+---
+
+6 – text for one
+
+---
+
+66 – text for two
+
+---
+
+666 – text for three
+
+--- 
+
+6666 – text for four

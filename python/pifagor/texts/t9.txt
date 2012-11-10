@@ -1,0 +1,17 @@
+text for zero
+
+---
+
+9 – text for one
+
+---
+
+99 – text for two
+
+---
+
+999 – text for three
+
+--- 
+
+9999 – text for four
