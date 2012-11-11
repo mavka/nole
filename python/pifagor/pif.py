@@ -1,20 +1,19 @@
 #coding: utf-8
 
 
+def data_check():
 
+	k = raw_input("дата рождения в формате дд.мм.гггг: ")
 
-count_of_digits = [3, 3, 1, 0, 1, 1, 2, 0, 1]
+	#checking good format of date, need to add numbers checking
+	if k[2] == "." and k[5] == "." and len(k) == 10:
+		print "good format"
+		return k
 
-for i in range(len(count_of_digits)):
-	texts = open("texts/t" + str(i+1) + ".txt")
-	tex = texts.read()
-	text = tex.split("---")
-	numbers = count_of_digits[i]
-	if numbers > len(text):
-		print text[-1]
 	else:
-		print text[numbers]
+		print "Give me a good format! Good means dd.mm.yyyy"
+		return data_check()
 
-	texts.close()
 
-
+i = data_check()
+print i

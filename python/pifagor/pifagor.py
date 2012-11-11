@@ -17,16 +17,21 @@ def number_to_list(some_number):
 	return nums
 
 
-i = raw_input("дата рождения в формате дд.мм.гггг: ")
+def data_check():
 
-#checking good format of date, need to add numbers checking
-if i[2] == "." and i[5] == "." and len(i) == 10:
-	print "good format"
+	k = raw_input("дата рождения в формате дд.мм.гггг: ")
 
-else:
-	print "Give me a good format! Good means dd.mm.yyyy"
+	#checking good format of date, need to add numbers checking
+	if k[2] == "." and k[5] == "." and len(k) == 10:
+		print "good format"
+		return k
+
+	else:
+		print "Give me a good format! Good means dd.mm.yyyy"
+		return data_check()
 
 
+i = data_check()
 
 i = i.split(".")
 day = i[0]
@@ -101,7 +106,7 @@ for i in range(len(count_of_digits)):
 	tex = texts.read()
 	text = tex.split("---")
 	numbers = count_of_digits[i]
-	if numbers > len(text):
+	if numbers >= len(text):
 		print text[-1].strip()
 	else:
 		print text[numbers].strip()
