@@ -1,5 +1,7 @@
 #coding: utf-8
 
+#it's only for testing some parts of pifagor.py
+
 
 def data_check():
 
