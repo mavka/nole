@@ -17,21 +17,30 @@ def number_to_list(some_number):
 	return nums
 
 
-def data_check():
+# def data_request_and_check():
 
-	k = raw_input("дата рождения в формате дд.мм.гггг: ")
+# 	k = raw_input("дата рождения в формате дд.мм.гггг: ")
 
-	#checking good format of date, need to add numbers checking
-	if k[2] == "." and k[5] == "." and len(k) == 10:
-		print "good format"
-		return k
+# 	#checking good format of date, need to add numbers checking
+# 	if k[2] == "." and k[5] == "." and len(k) == 10:
+# 		print "good format"
+# 		return k
 
-	else:
-		print "Give me a good format! Good means dd.mm.yyyy"
-		return data_check()
+# 	else:
+# 		print "Give me a good format! Good means dd.mm.yyyy"
+# 		return data_check()
+
+def data_request_and_check():
+	c = 1
+	while c:
+		k = raw_input("дата рождения в формате дд.мм.гггг: ")
+		if len(k) == 10:
+			if k[2] == "." and k[5] == ".":
+				c = 0
+	return k
 
 
-i = data_check()
+i = data_request_and_check()
 
 i = i.split(".")
 day = i[0]
@@ -83,18 +92,15 @@ print "full list of numbers is %r" %full_list
 
 
 #delete nulls from full list
-
 full_list = [x for x in full_list if x > 0] # офигеть красиво!
 print full_list
 print "it's your %r life" %len(full_list)
 
 #count all digits
-
 count_of_digits = [full_list.count(x) for x in range(1, 10)]
 print count_of_digits
 
-#print results!
-
+#print result
 for i in range(len(count_of_digits)):
 	heads = open("texts/heads.txt")
 	h = heads.read()
