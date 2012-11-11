@@ -1,6 +1,6 @@
 # all info - http://clck.ru/3skVp
 # coding: utf-8
-import sys; reload(sys); sys.setdefaultencoding('utf-8')
+import sys; reload(sys); sys.setdefaultencoding('utf-8') # magic string for printing russian text
 
 
 def char_to_digit(some_list):
@@ -86,10 +86,17 @@ print "it's your %r life" %len(full_list)
 #count all digits
 
 count_of_digits = [full_list.count(x) for x in range(1, 10)]
+print count_of_digits
 
 #print results!
 
 for i in range(len(count_of_digits)):
+	heads = open("texts/heads.txt")
+	h = heads.read()
+	head = h.split("---")
+	print head[i]
+	heads.close()
+	
 	texts = open("texts/t%r.txt" % (i+1))
 	tex = texts.read()
 	text = tex.split("---")
