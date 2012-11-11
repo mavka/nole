@@ -17,7 +17,7 @@ def number_to_list(some_number):
 	return nums
 
 
-i = "06.11.1977"
+i = raw_input("дата рождения в формате дд.мм.гггг: ")
 
 #checking good format of date, need to add numbers checking
 if i[2] == "." and i[5] == "." and len(i) == 10:
@@ -96,7 +96,7 @@ for i in range(len(count_of_digits)):
 	head = h.split("---")
 	print head[i]
 	heads.close()
-	
+
 	texts = open("texts/t%r.txt" % (i+1))
 	tex = texts.read()
 	text = tex.split("---")
