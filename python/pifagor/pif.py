@@ -10,8 +10,6 @@ def data_request_and_check():
 			if k[2] == "." and k[5] == ".":
 				c = 0
 
-#	while not(len(k) == 10 or k[2] == "." or k[4] == "."):
-#		k = raw_input("дата рождения в формате дд.мм.гггг: ")
 	return k
 
 i = data_request_and_check()
