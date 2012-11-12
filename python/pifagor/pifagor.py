@@ -31,13 +31,12 @@ def number_to_list(some_number):
 # 		return data_check()
 
 def data_request_and_check():
-	c = 1
-	while c:
+	# Бесконечный цикл, который завершается только по return k, иначе бесконечно выполняется
+	while True:
 		k = raw_input("дата рождения в формате дд.мм.гггг: ")
 		if len(k) == 10:
 			if k[2] == "." and k[5] == ".":
-				c = 0
-	return k
+				return k
 
 
 i = data_request_and_check()
