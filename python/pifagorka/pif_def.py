@@ -65,8 +65,7 @@ def pif(user_date):
 	fourth_work = sum(number_to_list(third_work))
 
 	# first list - numbers of day, month, year, its all_date
-
-	#second list - all work numbers (некрасиво! переделать)
+	# second list - all work numbers (некрасиво! переделать)
 	second_list = number_to_list(first_work) + number_to_list(second_work) + number_to_list(third_work) + number_to_list(fourth_work)
 
 	full_list = all_date + second_list
@@ -99,4 +98,4 @@ def pif(user_date):
 		texts.close()
 
 
-pif(raw_input("date: "))
+#pif(raw_input("date: "))
