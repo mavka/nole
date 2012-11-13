@@ -3,8 +3,6 @@
 import sys; reload(sys); sys.setdefaultencoding('utf-8') # magic string for printing russian text
 
 def pif(user_date):
-
-
 	def char_to_digit(some_list):
 		nums = []
 		for x in some_list:
@@ -33,8 +31,8 @@ def pif(user_date):
 	i = user_date
 	#i = data_check()
 
-	
-	
+
+
 	i = i.split(".")
 	day = i[0]
 	month = i[1]
@@ -73,7 +71,9 @@ def pif(user_date):
 
 	#delete nulls from full list
 	full_list = [x for x in full_list if x > 0] # офигеть красиво!
-	print "it's your %r life" %len(full_list)
+	res = ""
+
+	res += "it's your %r life" %len(full_list)
 
 	#count all digits
 	count_of_digits = [full_list.count(x) for x in range(1, 10)]
@@ -83,7 +83,7 @@ def pif(user_date):
 		heads = open("texts/heads.txt")
 		h = heads.read()
 		head = h.split("---")
-		print head[i]
+		res += head[i]
 		heads.close()
 
 		texts = open("texts/t%r.txt" % (i+1))
@@ -91,11 +91,13 @@ def pif(user_date):
 		text = tex.split("---")
 		numbers = count_of_digits[i]
 		if numbers >= len(text):
-			print text[-1].strip()
+			res += text[-1].strip()
 		else:
-			print text[numbers].strip()
+			res += text[numbers].strip()
 
 		texts.close()
+
+	return res
 
 
 #pif(raw_input("date: "))

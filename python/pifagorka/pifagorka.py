@@ -4,6 +4,7 @@ import sys; reload(sys); sys.setdefaultencoding('utf-8')
 from pif_def import pif
 from flask import Flask, request
 app = Flask('pifagorka')
+app.debug = True
 # этто нелья понять, надо запомнить, важно то что вот тут:
 ### | Тут написано "эта функция отвечает за адрес http://имясайта/
 #### \|/
@@ -22,7 +23,7 @@ def resultat():
 
 ### должно работать так. На глаз, не проверял, но должно.
 ### надо только убрать последнюю строчку (с raw_input которая) в pif_def.py
-    
-####    
+
+####
 if __name__ == "__main__":
     app.run()
